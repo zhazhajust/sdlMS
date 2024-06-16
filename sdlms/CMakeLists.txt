@@ -1,14 +1,14 @@
 
-set(FFMPEG_INCLUDE "D:\\VScode\\Maplestory\\FFMPEG\\include")
-set(FFMPEG_LIB "D:\\VScode\\Maplestory\\FFMPEG\\lib")
+# set(FFMPEG_INCLUDE "/usr/local/include")
+# set(FFMPEG_LIB "/usr/local/lib")
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-include_directories(
-    ${FFMPEG_INCLUDE}
-)
+# include_directories(
+#     ${FFMPEG_INCLUDE}
+# )
 
 set(wzlibcpp ${PROJECT_SOURCE_DIR}/3rdparty/wzlibcpp)
 include_directories(
@@ -17,9 +17,9 @@ include_directories(
     ${wzlibcpp}/mio/include
 )
 
-link_directories(
-    ${FFMPEG_LIB}
-)
+# link_directories(
+#     ${FFMPEG_LIB}
+# )
 
 file(GLOB SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/**/*.cpp)
 

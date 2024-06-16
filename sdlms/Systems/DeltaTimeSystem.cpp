@@ -65,7 +65,11 @@ void DeltaTimeSystem::update_avatar(Avatar *ava,World &world)
 		ava->act_time += delta_time;
 		if (ava->act_time >= delay)
 		{
-			ava->act_index = (ava->act_index + 1) % ava->stance_delays[ava->act].size();
+			auto frame_size = ava->stance_delays[ava->act].size();
+			if((ava->act_index + 1) % frame_size == 0){
+				frame_signal.emit(ava->act);
+			}
+			ava->act_index = (ava->act_index + 1) % frame_size;
 			ava->act_time = 0;
 		}
 	}

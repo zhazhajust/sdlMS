@@ -32,6 +32,7 @@ public:
         Left,
         Down,
         Right,
+        Attack
     };
     uint8_t vkey = None; // 上下按键
     uint8_t hkey = None; // 左右按键
