@@ -2,7 +2,7 @@ module;
 
 #include "entt/entt.hpp"
 
-export module systems:animate;
+export module systems;
 
 import components;
 
