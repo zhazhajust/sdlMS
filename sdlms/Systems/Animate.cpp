@@ -3,7 +3,7 @@ module;
 #include <SDL3/SDL.h>
 #include "entt/entt.hpp"
 
-module systems;
+module systems:animate;
 
 import components;
 import core;
